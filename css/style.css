@@ -1,0 +1,367 @@
+:root {
+    --lightBody: #F6F8FF;
+    --darkBody: #141D2F;
+    --darkBg: #1E2A47;
+    --grey: #697C9A;
+    --blueGrey: #4B6A9B;
+    --LightBg: #FEFEFE;
+    --blue: #0079FF;
+    --red: #F74646;
+    --black: #2B3442;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/space-mono-v12-latin-regular.woff2') format('woff2'),
+        url('../fonts/space-mono-v12-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/space-mono-v12-latin-700.woff2') format('woff2'),
+        url('../fonts/space-mono-v12-latin-700.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Space Mono';
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightBody);
+    transition: .5s;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.gitHub {
+    width: 100%;
+    max-width: 778px;
+    margin-top: 130px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 36px;
+}
+
+.header__logo {
+    font-size: 2.6rem;
+    line-height: 39px;
+}
+
+.mode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.mode:hover {
+    cursor: pointer;
+}
+
+.mode__text {
+    color: var(--grey);
+}
+.search {
+    width: 100%;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    background-color: var(--LightBg);
+    display: flex;
+    align-items: center;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+
+}
+
+.search__icon {
+    margin-left: 32px;
+    margin-right: 24px;
+}
+
+.search__input {
+    width: 100%;
+    margin-right: auto;
+    border: none;
+    background-color: inherit;
+    outline: none;
+    font-size: 18px;
+    line-height: 25px;
+    color: #222731;
+}
+
+.search__input::placeholder {
+    color: var(--blueGrey);
+}
+
+.search__btn {
+    padding: 12.5px 23px 13.5px 24px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: var(--LightBg);
+    margin-right: 10px;
+}
+
+.search__btn:hover {
+    cursor: pointer;
+}
+.search__btn:active {
+    background-color: #60ABFF;
+}
+
+.card {
+    width: 100%;
+    margin-top: 24px;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 16px 30px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    background: var(--LightBg);
+
+}
+
+.octocat {
+    display: flex;
+    align-items: flex-start;
+    margin: 48px 0 21px 0;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 117px;
+    height: 117px;
+    margin-right: 37px;
+}
+
+.octocat__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.octocat__title {
+    color: var(--black);
+    font-size: 2.6rem;
+    line-height: 39px;
+}
+
+.octocat__link {
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: var(--blue);
+}
+
+.octocat__date {
+    margin-left: auto;
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.user-info {
+    padding-left: 156px;
+    padding-bottom: 24px;
+    transform: translateY(-50px);
+}
+
+.bio {
+    font-size: 1.5rem;
+    line-height: 25px;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    color: var(--blueGrey);
+    margin-bottom: 32px;
+}
+
+.nums {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    gap: 82px;
+    background: var(--lightBody);
+    border-radius: 10px;
+    padding: 15px 0 17px 32px;
+}
+
+.title {
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--blueGrey);
+}
+
+.num {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 33px;
+    color: var(--black);
+}
+
+.footer {
+    margin-top: 37px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "item1 item3"
+        "item2 item4";
+    gap: 19px;
+}
+
+.websites {
+    max-width: 10px;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+
+.text {
+    color: var(--blueGrey);
+}
+
+.twitter {
+    color: #A4B3CA;
+}
+
+.foo-info {
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+.color{
+    color: #FFFFFF;
+}
+.color2{
+    color: #4B6A9B;
+}
+@media (max-width: 768px) {
+    .user-info {
+        padding-left: 0px;
+        padding-bottom: 24px;
+        transform: translateY(0px);
+    }
+
+    .octocat__content {
+        flex-direction: column;
+    }
+
+    .octocat__date {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .gitHub {
+        margin-top: 31px;
+    }
+
+    .search__input {
+        font-size: 1.4rem;
+    }
+
+    .search__icon {
+        margin-left: 16px;
+        margin-right: 8px;
+    }
+
+    .search__btn {
+        padding: 12.5px 14px 12.5px 18px;
+        font-size: 1.4rem;
+    }
+
+    .card {
+        padding: 0 24px;
+    }
+
+    .avatar {
+        margin-right: 1.9rem;
+    }
+
+    .nums {
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4";
+    }
+}
+
+@media (max-width:375px) {
+
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .octocat__title {
+        font-size: 1.6rem;
+    }
+
+    .octocat__link,
+    .octocat__date {
+        font-size: 1.3rem;
+    }
+}
+
